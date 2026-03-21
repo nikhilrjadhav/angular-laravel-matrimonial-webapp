@@ -1,0 +1,87 @@
+{
+  "COMMON": {
+    "APP_NAME": "SaralMilan",
+    "SAVE": "Save",
+    "CANCEL": "Cancel",
+    "SEARCH": "Search"
+  },
+
+  "HEADER": {
+    "LOGIN": "Login",
+    "REGISTER": "Register",
+    "LANGUAGE": "Language"
+  },
+
+  "HOME": {
+    "TITLE": "Find Your Perfect Life Partner",
+    "SUBTITLE": "India's most trusted matrimonial service with thousands of verified profiles. Begin your journey towards a beautiful tomorrow."
+  },
+
+  "NAV": {
+    "HOME": "Home",
+    "SEARCH": "Search",
+    "PLANS": "Plans",
+    "ABOUT": "About",
+    "CONTACT": "Contact"
+  },
+
+  "BUTTON": {
+    "LOGIN": "Login",
+    "REGISTER_FREE": "Register Free",
+    "SEARCH_PROFILES": "Search Profiles",
+    "SEARCH": "Search"
+  },
+  "LABELS": {
+    "LOOKING_FOR": "Looking For",
+    "GENDER": "Gender",
+    "NAME": "Name",
+    "AGE": "Age",
+    "LOCATION": "Location",
+    "CASTE": "Caste",
+    "PROFESSION": "Profession",
+    "EDUCATION": "Education",
+    "ABOUT_ME": "About Me",
+    "PREFERENCES": "Preferences",
+    "BRIDE": "Bride",
+    "GROOM": "Groom",
+    "COMMUNITY": "Community",
+    "VERIFIED_PROFILES": "Verified Profiles",
+    "SUCCESS_MATCHES": "Successful Matches",
+    "HAPPY_MARRIAGES": "Happy Marriages",
+    "CITIES_COVERED": "Cities Covered",
+    "FEATURED_PROFILES": "Featured Profiles",
+    "FEATURED_PROFILE_SUBTITLE": "Discover handpicked profiles of our verified members",
+    "HOW_IT_WORKS": "How It Works",
+    "HOW_IT_WORKS_SUBTITLE": "Find your life partner in 4 simple steps",
+    "HW_STEP1": "Create Profile",
+    "HW_STEP1_DESC": "Register and create your detailed profile with photos and preferences",
+    "HW_STEP2": "Search & Filter",
+    "HW_STEP2_DESC": "Use our advanced filters to find compatible profiles that match your preferences",
+    "HW_STEP3": "Connect",
+    "HW_STEP3_DESC": "Express interest and connect with potential matches securely through our platform",
+    "HW_STEP4": "Get Matched",
+    "HW_STEP4_DESC": "Find your perfect match and start your journey towards a happy marriage"
+  },
+
+  "VALIDATION":{
+    "firstName_required": "* First name required",
+    "lastName_required": "* Last name required",
+    "gender_required": "* Gender required",
+    "samajId_required": "* Samaj required",
+    "emailId_required": "* Email Id required",
+    "invalid_email": "* Invalid Email Id",
+    "mobileNumber_required": "* Mobile Number required",
+    "password_required": "* Password required"
+  },
+
+  "SEO": {
+    "HOME": {
+      "TITLE": "Find Your Life Partner | SaralMilan",
+      "DESCRIPTION": "Find verified Indian matrimonial profiles near you"
+    },
+    "SEARCH": {
+      "TITLE": "Search Profiles | SaralMilan",
+      "DESCRIPTION": "Search verified matrimonial profiles by location, caste, and preferences"
+    }
+  }
+}

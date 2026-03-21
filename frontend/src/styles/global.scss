@@ -1,0 +1,18 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #fafafa;
+  color: #2e2e2e;
+  font-family: 'Inter', 'Noto Serif Devanagari', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 16px;
+}

@@ -1,1 +1,163 @@
-/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+
+
+html {
+  @include mat.theme((
+    color: (
+      theme-type: light,
+      primary: mat.$red-palette,
+      tertiary: mat.$yellow-palette,
+    ),
+    typography: Mukta,
+    density: 0,
+  ));
+}
+
+:root {
+  --primary: #B71C1C;
+  --primary-hover: #D32F2F;
+  --primary-light: #FFCDD2;
+  --primary-50: #FFEBEE;
+  --secondary: #FFB300;
+  --secondary-hover: #FFCA28;
+  --secondary-light: #FFF8E1;
+  --bg-app: #FFF8F6;
+  --bg-card: #FFFFFF;
+  --text-main: #212121;
+  --text-secondary: #424242;
+  --text-muted: #757575;
+  --border: #E0E0E0;
+  --border-light: #F5F5F5;
+  --success: #2E7D32;
+  --error: #C62828;
+  --warning: #EF6C00;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
+  --shadow-lg: 0 8px 24px rgba(0,0,0,0.12);
+  --shadow-xl: 0 16px 48px rgba(0,0,0,0.15);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Mukta', 'Roboto', sans-serif;
+  background: var(--bg-app);
+  color: var(--text-main);
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  color: var(--text-main);
+  letter-spacing: -0.02em;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.section-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  @media (min-width: 768px) {
+    font-size: 2.5rem;
+  }
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 1rem;
+  max-width: 600px;
+  margin: 0 auto 2.5rem;
+  @media (min-width: 768px) {
+    font-size: 1.1rem;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  @media (min-width: 768px) {
+    padding: 0 2rem;
+  }
+}
+
+// Material overrides
+.mat-mdc-raised-button.mat-primary {
+  --mdc-protected-button-container-color: var(--primary);
+  --mdc-protected-button-label-text-color: #fff;
+  border-radius: 28px !important;
+  font-family: 'Mukta', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  padding: 0 28px;
+  height: 44px;
+}
+
+.mat-mdc-outlined-button {
+  border-radius: 28px !important;
+  font-family: 'Mukta', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.mat-mdc-fab.mat-primary, .mat-mdc-mini-fab.mat-primary {
+  --mdc-fab-container-color: var(--primary);
+}
+
+.mat-mdc-card {
+  border-radius: 8px !important;
+  border: 1px solid var(--border-light);
+}
+
+.mat-mdc-dialog-container .mdc-dialog__surface {
+  border-radius: 12px !important;
+}
+
+.mat-mdc-snack-bar-container {
+  border-radius: 8px !important;
+}
+
+.mat-mdc-form-field {
+  font-family: 'Mukta', sans-serif;
+}
+
+// Utility classes
+.text-primary { color: var(--primary); }
+.text-secondary-color { color: var(--secondary); }
+.text-muted { color: var(--text-muted); }
+.bg-primary { background-color: var(--primary); }
+.bg-secondary { background-color: var(--secondary); }
+
+// Scrollbar
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--border-light);
+}
+::-webkit-scrollbar-thumb {
+  background: #BDBDBD;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9E9E9E;
+}
+

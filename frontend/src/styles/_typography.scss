@@ -1,0 +1,15 @@
+@use '@angular/material' as mat;
+
+// M2 Typography config
+$saral-typography: mat.m2-define-typography-config(
+  $font-family: 'Inter, Noto Serif Devanagari, sans-serif',
+
+  $headline-1: mat.m2-define-typography-level(36px, 44px, 700),
+  $headline-2: mat.m2-define-typography-level(30px, 38px, 600),
+  $headline-3: mat.m2-define-typography-level(24px, 32px, 600),
+
+  $body-1: mat.m2-define-typography-level(16px, 24px, 400),
+  $body-2: mat.m2-define-typography-level(14px, 20px, 400),
+
+  $button: mat.m2-define-typography-level(14px, 14px, 600)
+);

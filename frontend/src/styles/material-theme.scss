@@ -1,0 +1,19 @@
+@use '@angular/material' as mat;
+@use './palette' as palette;
+@use './typography' as typography;
+
+// M2 core (NO typography passed here)
+@include mat.core();
+
+// Theme
+$saral-theme: mat.m2-define-light-theme((
+  color: (
+    primary: palette.$saral-primary,
+    accent: palette.$saral-accent,
+    warn: palette.$saral-warn,
+  ),
+  typography: typography.$saral-typography,
+));
+
+// Apply theme
+@include mat.all-component-themes($saral-theme);
