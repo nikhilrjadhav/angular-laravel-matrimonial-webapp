@@ -14,6 +14,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::group(['prefix' => 'lookup'], function () {
+    Route::get('/states', [LookupController::class, 'states']);
+    Route::get('/cities', [LookupController::class, 'citiesByState']);
+    Route::get('/samaj', [LookupController::class, 'samaj']);
+    Route::get('/occupations', [LookupController::class, 'occupations']);
+    Route::get('/educations', [LookupController::class, 'educations']);
+    Route::get('/search-cities', [LookupController::class, 'searchCities']);
+});
+
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
