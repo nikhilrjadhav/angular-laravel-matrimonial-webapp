@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\LookupController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -23,6 +24,13 @@ Route::group(['prefix' => 'lookup'], function () {
     Route::get('/search-cities', [LookupController::class, 'searchCities']);
 });
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+
+Route::post('/register', [AuthController::class, 'register']);
+Route::post('/login', [AuthController::class, 'login'])->middleware('throttle:5,1');
+Route::post('/coupon/validate', [CouponController::class, 'validateCoupon']);
+Route::post('/auth/check-user', [AuthController::class, 'checkUserExists']);
+
+Route::middleware(['auth:sanctum'])->group(function () {
+    Route::post('/auth/refresh-token', [AuthController::class, 'refreshToken']);
+    Route::post('/logout', [AuthController::class, 'logout']);
 });
