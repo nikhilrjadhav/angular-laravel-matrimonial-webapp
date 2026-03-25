@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\Api\AuthController;
+use App\Http\Controllers\Api\CouponController;
 use App\Http\Controllers\Api\LookupController;
+use App\Http\Controllers\Api\ProfilesController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -33,4 +36,11 @@ Route::post('/auth/check-user', [AuthController::class, 'checkUserExists']);
 Route::middleware(['auth:sanctum'])->group(function () {
     Route::post('/auth/refresh-token', [AuthController::class, 'refreshToken']);
     Route::post('/logout', [AuthController::class, 'logout']);
+});
+
+Route::group(['prefix' => 'profiles'], function () {
+    Route::get('/search', [ProfilesController::class, 'search']);
+    //API to get random active 15 profiles to show publically
+    Route::get('/featured', [ProfilesController::class, 'featuredPublic'])
+        ->middleware('throttle:60,1');
 });
